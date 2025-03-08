@@ -6,7 +6,7 @@ import Question from './Question';
 import { useNavigate } from 'react-router-dom';
 
 const SurveyForm = () => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState();
   const [answers, setAnswers] = useState({});
   const navigate = useNavigate(); // Initialize navigate
 
@@ -40,7 +40,7 @@ const SurveyForm = () => {
 
   return (
     <Container>
-      <Row className="mb-4">
+      <Row className="">
         <Col>
           <h2>Question {currentQuestionIndex + 1}/{questions.length}</h2>
           <ProgressBar now={(currentQuestionIndex + 1) * 100 / questions.length} />

@@ -1,21 +1,28 @@
 // src/App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, BrowserRouter } from 'react-router-dom';
 import SurveyForm from './components/SurveyForm';
 import WelcomeScreen from './components/WelcomeScreen';
 import ThankYouPage from './components/ThankYouPage';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Navbar from './components/Navbar';
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
+    {/* <Router> */}
       <div className="App">
-        <Routes>
+        
+        <Navbar/>
+        {/* <Routes>
           <Route path="/" element={<WelcomeScreen />} />
           <Route path="/survey" element={<SurveyForm />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
-        </Routes>
+        </Routes> */}
+        
       </div>
-    </Router>
+    {/* </Router> */}
+    </BrowserRouter>
+   
   );
 }
 
